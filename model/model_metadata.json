@@ -1,0 +1,63 @@
+{
+  "dataset_name": "RAVDESS (Ryerson Audio-Visual Database of Emotional Speech and Song)",
+  "source": "https://zenodo.org/records/1188976",
+  "total_samples": 864,
+  "feature_dimension": 396,
+  "classes": [
+    "angry",
+    "happy",
+    "neutral",
+    "sad"
+  ],
+  "class_counts": {
+    "angry": 192,
+    "happy": 192,
+    "neutral": 288,
+    "sad": 192
+  },
+  "test_accuracy": 0.8439,
+  "confusion_matrix": [
+    [
+      35,
+      2,
+      0,
+      1
+    ],
+    [
+      5,
+      28,
+      2,
+      3
+    ],
+    [
+      0,
+      0,
+      54,
+      4
+    ],
+    [
+      1,
+      2,
+      7,
+      29
+    ]
+  ],
+  "features": [
+    "MFCC (40 coefficients, Mean & Std: 80 features)",
+    "Chroma STFT (12 Pitch Classes, Mean & Std: 24 features)",
+    "Mel Spectrogram (128 Frequency Bins, Mean & Std: 256 features)",
+    "Spectral Contrast (7 Octave Bands, Mean & Std: 14 features)",
+    "Tonnetz (6 Tonal Centroid Dimensions, Mean & Std: 12 features)",
+    "Zero Crossing Rate (Mean & Std: 2 features)",
+    "Root Mean Square Energy (Mean & Std: 2 features)",
+    "Spectral Centroid (Mean & Std: 2 features)",
+    "Spectral Rolloff (Mean & Std: 2 features)",
+    "Spectral Flatness (Mean & Std: 2 features)"
+  ],
+  "ensemble_models": [
+    "Multi-Layer Perceptron (256-128-64 Architecture, Adam)",
+    "Support Vector Classifier (RBF Kernel, C=5.0)",
+    "Random Forest Classifier (150 Estimators)"
+  ],
+  "created_at": "2026-10-04 20:04:01"
+}
